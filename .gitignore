@@ -39,3 +39,4 @@ cache/killadded.mk
 # IIS7 
 web.config
 
+docker/docker-compose.yml
