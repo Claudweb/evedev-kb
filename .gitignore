@@ -29,10 +29,12 @@ cache/killadded.mk
 *~
 *.swp
 *.bak
+*.iml
 .buildpath
 .cache
 .project
 .settings
+.idea
 
 # IIS7 
 web.config
