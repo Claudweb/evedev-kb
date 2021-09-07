@@ -40,3 +40,4 @@ cache/killadded.mk
 web.config
 
 docker/docker-compose.yml
+*.log
