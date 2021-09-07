@@ -80,10 +80,11 @@ class EDKError
      */
     protected static function checkAndRollLogFile()
     {
-        if(filesize(self::$LOG_FILE) > 1024*1024*self::$LOG_FILE_SIZE_MAX)
-        {
-            @unlink(self::$LOG_FILE.".old");
-            rename(self::$LOG_FILE, self::$LOG_FILE.".old");
+        if (file_exists(self::$LOG_FILE)) {
+            if (filesize(self::$LOG_FILE) > 1024 * 1024 * self::$LOG_FILE_SIZE_MAX) {
+                @unlink(self::$LOG_FILE . ".old");
+                rename(self::$LOG_FILE, self::$LOG_FILE . ".old");
+            }
         }
     }
     
